@@ -1,0 +1,24 @@
+[
+  {
+    "input": ["hey", "hi", "hello"],
+    "response": "hello",
+    "keyword": ["hey", "hi", "hello"]
+  },
+  {
+    "input": ["what", "courses", "do", "you", "offer"],
+    "response": "We offer different types of courses",
+    "keyword": ["what", "course", "courses", "offer"]
+  },
+  {
+    "input": ["what", "programs", "do", "you", "offer"],
+    "response": "We offer different types of programs",
+    "keyword": ["what", "program", "programs", "offer"]
+  },
+
+
+  {
+    "input": [""],
+    "response": "",
+    "keyword": [""]
+  }
+]
