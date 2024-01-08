@@ -5,7 +5,7 @@ public class Main {
         Chatbot bot = new Chatbot();
         Scanner scan = new Scanner(System.in);
 
-        String userInput = "";
+        String userInput;
 
         System.out.println("Bot: Hi! How can I help you?");
 

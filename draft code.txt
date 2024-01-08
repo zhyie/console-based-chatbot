@@ -1,0 +1,57 @@
+draft code
+
+import java.util.List;
+
+public class Chatbot {
+    private List<Response> responses;
+
+    public Chatbot() {
+//        responses = Response.responses();
+        responses = Response.loadJSON("response.json");
+    }
+
+    public String response(String userInput) {
+        String[] splitMessage = userInput.split("\\s+|[,;?!.-]\\s*");
+
+        int keywordCount = 0;
+        int responseCount = 0;
+
+        int bestResponseScore = Integer.MIN_VALUE;
+        int bestResponseIndex = -1;
+
+        for (int i = 0; i <responses.size(); i++) {
+            Response response = responses.get(i);
+            List<String> keyword = response.getKeyword();
+            List<String> input = response.getInput();
+
+            if (!keyword.isEmpty()) {
+                for (String word : splitMessage) {
+                    if (keyword.contains(word)) {
+                        keywordCount++;
+                    }
+                }
+            }
+
+            if (keywordCount == input.size()) {
+                for (String word : splitMessage) {
+                    if (input.contains(word)) {
+                        responseCount++;
+                    }
+                }
+            }
+
+            int score = keywordCount + responseCount;
+
+            if (score > bestResponseScore) {
+                bestResponseScore = score;
+                bestResponseIndex = i;
+            }
+        }
+
+        if (bestResponseScore > 1) {
+            return responses.get(bestResponseIndex).getResponse();
+        } else {
+            return "Sorry, I don't understand.";
+        }
+    }
+}
