@@ -1,6 +1,5 @@
-# Simple Java Chatbot
+# Console-based Chatbot
 
-## Overview
 This Java chatbot is a simple implementation that uses predefined responses loaded from a JSON file. The chatbot recognizes keywords in user input and provides appropriate responses based on the predefined rules.
 
 
@@ -21,4 +20,4 @@ The chatbot's responses are configured in the **`response.json`** file. Each ent
 
 
 # License
-This project is licensed under the [MIT License](LICENSE.md).
+This project is licensed under the [MIT License](LICENSE).
