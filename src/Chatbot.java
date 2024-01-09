@@ -41,14 +41,6 @@ public class Chatbot {
                     }
                 }
             }
-
-            else {
-                // is it greetings/ xclusive for greetings
-                String greetings = isGreeting(userInput);
-                if (greetings != null) {
-                    return greetings;
-                }
-            }
         }
 
         // nah they dont
@@ -59,27 +51,13 @@ public class Chatbot {
         List<String> randomResponses = List.of(
                 "I don't understand.",
                 "I'm not sure what you're talking about.",
-                "Can you provide more details?"
+                "Can you provide more details?",
+                "Visit https://www.sti.edu, it might have what you're looking for."
         );
 
         Random random = new Random();
         int randomResponse = random.nextInt(randomResponses.size());
 
         return randomResponses.get(randomResponse);
-    }
-
-    private String isGreeting(String userInput) {
-
-        List<String> greetings = List.of(
-                "hi", "hello", "hey", "howdy"
-        );
-
-        for (String greet : greetings) {
-            if (userInput.contains(greet)) {
-                return "Hello, there!";
-            }
-        }
-
-        return null;
     }
 }

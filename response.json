@@ -1,24 +1,32 @@
 [
   {
-    "input": ["hey", "hi", "hello"],
-    "response": "hello",
-    "keyword": ["hey", "hi", "hello"]
-  },
-  {
-    "input": ["what", "courses", "do", "you", "offer"],
-    "response": "We offer different types of courses",
+    "input": ["courses", "what", "do", "you", "offer"],
+    "response": "We offer different courses depends on the programs, visit our website for full details: https://www.sti.edu",
     "keyword": ["what", "course", "courses", "offer"]
   },
   {
-    "input": ["what", "programs", "do", "you", "offer"],
-    "response": "We offer different types of programs",
+    "input": ["programs", "what", "do", "you", "offer"],
+    "response": "We offer Computer Engineering, Information Technology, Tourism, Criminology, ",
     "keyword": ["what", "program", "programs", "offer"]
   },
-
-
   {
-    "input": [""],
-    "response": "",
-    "keyword": [""]
+    "input": ["admissions", "how", "to", "apply"],
+    "response": "To apply for admissions, please visit our Admissions page on the school website.\nYou'll find detailed information on the application process, requirements, and deadlines.\nhttps://www.sti.edu",
+    "keyword": ["admissions", "apply", "how"]
+  },
+  {
+    "input": ["location", "where", "are", "located"],
+    "response": "Our school is located at Ortigas Avenue Extension, Cainta.\nYou can find more information about our location and campus facilities on our website.\nhttps://www.sti.edu",
+    "keyword": ["location", "where", "are", "you", "located"]
+  },
+  {
+    "input": ["facilities", "what", "do", "have"],
+    "response": "Our campus features state-of-the-art facilities, including modern classrooms, well-equipped laboratories, a library, and recreational areas for students.",
+    "keyword": ["facilities", "have", "what"]
+  },
+  {
+    "input": ["contact", "how", "can", "I", "reach", "you"],
+    "response": "For general inquiries, please contact our Admissions Office at admissions@ortigas-cainta.sti.edu.",
+    "keyword": ["contact", "reach", "inquiries", "how", "where"]
   }
 ]
